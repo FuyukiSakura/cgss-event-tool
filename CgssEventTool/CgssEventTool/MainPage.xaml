@@ -9,11 +9,97 @@
         <viewModels:EventPointCalculatorViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="{Binding Title}" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Padding="10,0"
+                     HorizontalOptions="StartAndExpand">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <!-- Align label with Entry -->
+                    <Style TargetType="Label">
+                        <Setter Property="VerticalOptions" Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+
+            <Label HorizontalOptions="CenterAndExpand"
+                   Text="{Binding Title}"
+                   FontSize="30" />
+            
+            <!--#region Input -->
+
+            <Grid>
+                <!-- Separate label and input evenly -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!-- Number of rows -->
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!-- Player Level -->
+                <Label Text="{Binding PlayerLevelLabel}" />
+                <Entry Grid.Row="0"
+                       Grid.Column="1"
+                       Text="{Binding PlayerLevel}"
+                       Keyboard="Numeric" />
+
+                <!-- Star number -->
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="{Binding StarTotalLabel}" />
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding StarTotal}"
+                       Keyboard="Numeric" />
+
+                <!-- Event time -->
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="{Binding EventHoursLabel}" />
+                <Entry Grid.Row="2"
+                       Grid.Column="1"
+                       Text="{Binding EventHours}"
+                       Keyboard="Numeric" />
+            </Grid>
+
+            <!--#endregion -->
+
+            <!--#region Result -->
+
+            <Label HorizontalOptions="CenterAndExpand"
+                   Text="{Binding ResultSectionHeaderText}"
+                   FontSize="20" />
+
+            <Grid>
+                <!-- Separate label and input evenly -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!-- Number of rows -->
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!-- Star number -->
+                <Label Text="{Binding NaturalRecoverLabel}" />
+                <Entry Grid.Row="0"
+                       Grid.Column="1"
+                       Text="{Binding NaturalRecover}"
+                       IsEnabled="False" />
+
+            </Grid>
+
+            <!--#endregion-->
+
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>

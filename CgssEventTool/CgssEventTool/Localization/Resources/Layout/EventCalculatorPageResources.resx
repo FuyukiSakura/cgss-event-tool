@@ -117,6 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EventHoursLabel" xml:space="preserve">
+    <value>Event hours</value>
+    <comment>Text displayed as the label of the event hours tinput.</comment>
+  </data>
+  <data name="NaturalRecoverLabel" xml:space="preserve">
+    <value>Natural recover</value>
+    <comment>Text displayed as the label of the natural recover result.</comment>
+  </data>
+  <data name="PlayerLevelLabel" xml:space="preserve">
+    <value>PLv</value>
+    <comment>Text displayed as the label of the player level input.</comment>
+  </data>
+  <data name="ResultSectionHeader" xml:space="preserve">
+    <value>Results</value>
+    <comment>Text displayed as the result section header.</comment>
+  </data>
+  <data name="StarTotalLabel" xml:space="preserve">
+    <value>Star no.</value>
+    <comment>Text displayed as the label of the total no. of star tinput.</comment>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Event Points Calculator</value>
     <comment>Text displayed on top of the page as the title.</comment>

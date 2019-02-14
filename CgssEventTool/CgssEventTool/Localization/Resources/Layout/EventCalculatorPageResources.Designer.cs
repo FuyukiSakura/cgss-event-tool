@@ -61,6 +61,51 @@ namespace CgssEventTool.Localization.Resources.Layout {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Event hours.
+        /// </summary>
+        internal static string EventHoursLabel {
+            get {
+                return ResourceManager.GetString("EventHoursLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural recover.
+        /// </summary>
+        internal static string NaturalRecoverLabel {
+            get {
+                return ResourceManager.GetString("NaturalRecoverLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PLv.
+        /// </summary>
+        internal static string PlayerLevelLabel {
+            get {
+                return ResourceManager.GetString("PlayerLevelLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Results.
+        /// </summary>
+        internal static string ResultSectionHeader {
+            get {
+                return ResourceManager.GetString("ResultSectionHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Star no..
+        /// </summary>
+        internal static string StarTotalLabel {
+            get {
+                return ResourceManager.GetString("StarTotalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Event Points Calculator.
         /// </summary>
         internal static string Title {
