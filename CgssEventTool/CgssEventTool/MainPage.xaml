@@ -2,11 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CgssEventTool"
+             xmlns:viewModels="clr-namespace:CgssEventTool.ViewModels.Tool;assembly=CgssEventTool"
              x:Class="CgssEventTool.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:EventPointCalculatorViewModel />
+    </ContentPage.BindingContext>
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="{Binding Title}" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     </StackLayout>
