@@ -72,8 +72,8 @@
             <!--#region Result -->
 
             <Label HorizontalOptions="CenterAndExpand"
-                   Text="{Binding ResultSectionHeaderText}"
-                   FontSize="20" />
+                   FontSize="20"
+                   Text="{Binding ResultSectionHeaderText}" />
 
             <Grid>
                 <!-- Separate label and input evenly -->
@@ -86,6 +86,13 @@
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
 
                 <!-- Star number -->
@@ -94,6 +101,78 @@
                        Grid.Column="1"
                        Text="{Binding NaturalRecover}"
                        IsEnabled="False" />
+
+                <!-- 19 Stamina -->
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="{Binding MultiplierOneLabel}" />
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding GamesOfMultiplierOne}"
+                       IsEnabled="False" />
+
+                <!-- 38 Stamina -->
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="{Binding MultiplierTwoLabel}" />
+                <Entry Grid.Row="2"
+                       Grid.Column="1"
+                       Text="{Binding GamesOfMultiplierTwo}"
+                       IsEnabled="False" />
+
+                <!--#region Collections -->
+
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       Text="{Binding CollectedItemHeaderText}" />
+
+                <!-- No. of collected items -->
+                <Label Grid.Row="4"
+                       Grid.Column="0"
+                       Text="{Binding CollectedItemLabel}" />
+                <Entry Grid.Row="4"
+                       Grid.Column="1"
+                       Text="{Binding CollectedItemNo}"
+                       IsEnabled="False" />
+
+                <!-- Points from item -->
+                <Label Grid.Row="5"
+                       Grid.Column="0"
+                       Text="{Binding CollectedPointsFromItemLabel}" />
+                <Entry Grid.Row="5"
+                       Grid.Column="1"
+                       Text="{Binding CollectedPointsFromItem}"
+                       IsEnabled="False" />
+
+                <!-- Points using item -->
+                <Label Grid.Row="6"
+                       Grid.Column="0"
+                       Text="{Binding CollectedPointsUsingItemLabel}" />
+                <Entry Grid.Row="6"
+                       Grid.Column="1"
+                       Text="{Binding CollectedPointsUsingItem}"
+                       IsEnabled="False" />
+
+                <!-- Total points -->
+                <Label Grid.Row="7"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       Text="{Binding SummeryHeaderText}" />
+
+                <Label Grid.Row="8"
+                       Grid.Column="0"
+                       Text="{Binding TotalPointsLabel}" />
+                <Entry Grid.Row="8"
+                       Grid.Column="1"
+                       Text="{Binding TotalPoints}"
+                       IsEnabled="False" />
+
+                <!--#endregion-->
 
             </Grid>
 

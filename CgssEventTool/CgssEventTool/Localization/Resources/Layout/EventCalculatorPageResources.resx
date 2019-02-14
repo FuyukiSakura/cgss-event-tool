@@ -117,9 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CollectedItemHeader" xml:space="preserve">
+    <value>Collection</value>
+    <comment>Text displayed as the collected items section header.</comment>
+  </data>
+  <data name="CollectedItemLabel" xml:space="preserve">
+    <value>Collected Items</value>
+    <comment>Text displayed as the label of total collected items.</comment>
+  </data>
+  <data name="CollectedPointsFromItemLabel" xml:space="preserve">
+    <value>Points from item</value>
+    <comment>Text displayed as the label of collected points from item.</comment>
+  </data>
+  <data name="CollectedPointsUsingItemLabel" xml:space="preserve">
+    <value>Points using item</value>
+    <comment>Text displayed as the label of collected points using item.</comment>
+  </data>
   <data name="EventHoursLabel" xml:space="preserve">
     <value>Event hours</value>
     <comment>Text displayed as the label of the event hours tinput.</comment>
+  </data>
+  <data name="MultiplierOneLabel" xml:space="preserve">
+    <value>1x (19 Stem)</value>
+    <comment>Text displayed as the label of 19 stamina result.</comment>
+  </data>
+  <data name="MultiplierTwoLabel" xml:space="preserve">
+    <value>2x (38 Stem)</value>
+    <comment>Text displayed as the label of 38 stamina result.</comment>
   </data>
   <data name="NaturalRecoverLabel" xml:space="preserve">
     <value>Natural recover</value>
@@ -137,8 +161,16 @@
     <value>Star no.</value>
     <comment>Text displayed as the label of the total no. of star tinput.</comment>
   </data>
+  <data name="SummaryHeader" xml:space="preserve">
+    <value>Summary</value>
+    <comment>Text displayed as summary section header.</comment>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Event Points Calculator</value>
     <comment>Text displayed on top of the page as the title.</comment>
+  </data>
+  <data name="TotalPointsLabel" xml:space="preserve">
+    <value>Total Points</value>
+    <comment>Text displayed as the label of total points.</comment>
   </data>
 </root>
