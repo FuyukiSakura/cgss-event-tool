@@ -61,11 +61,128 @@ namespace CgssEventTool.Localization.Resources.Layout {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collection.
+        /// </summary>
+        internal static string CollectedItemHeader {
+            get {
+                return ResourceManager.GetString("CollectedItemHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collected Items.
+        /// </summary>
+        internal static string CollectedItemLabel {
+            get {
+                return ResourceManager.GetString("CollectedItemLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Points from item.
+        /// </summary>
+        internal static string CollectedPointsFromItemLabel {
+            get {
+                return ResourceManager.GetString("CollectedPointsFromItemLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Points using item.
+        /// </summary>
+        internal static string CollectedPointsUsingItemLabel {
+            get {
+                return ResourceManager.GetString("CollectedPointsUsingItemLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event hours.
+        /// </summary>
+        internal static string EventHoursLabel {
+            get {
+                return ResourceManager.GetString("EventHoursLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1x (19 Stem).
+        /// </summary>
+        internal static string MultiplierOneLabel {
+            get {
+                return ResourceManager.GetString("MultiplierOneLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2x (38 Stem).
+        /// </summary>
+        internal static string MultiplierTwoLabel {
+            get {
+                return ResourceManager.GetString("MultiplierTwoLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural recover.
+        /// </summary>
+        internal static string NaturalRecoverLabel {
+            get {
+                return ResourceManager.GetString("NaturalRecoverLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PLv.
+        /// </summary>
+        internal static string PlayerLevelLabel {
+            get {
+                return ResourceManager.GetString("PlayerLevelLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Results.
+        /// </summary>
+        internal static string ResultSectionHeader {
+            get {
+                return ResourceManager.GetString("ResultSectionHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Star no..
+        /// </summary>
+        internal static string StarTotalLabel {
+            get {
+                return ResourceManager.GetString("StarTotalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        internal static string SummaryHeader {
+            get {
+                return ResourceManager.GetString("SummaryHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Event Points Calculator.
         /// </summary>
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Points.
+        /// </summary>
+        internal static string TotalPointsLabel {
+            get {
+                return ResourceManager.GetString("TotalPointsLabel", resourceCulture);
             }
         }
     }
