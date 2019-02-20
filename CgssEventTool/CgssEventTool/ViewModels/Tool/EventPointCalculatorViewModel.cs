@@ -8,9 +8,9 @@ namespace CgssEventTool.ViewModels.Tool
         private const int SingleStaminaPerPlay = 19;
         private const int SingleCollectionPerPlay = 53;
 
-        private int _playerLevel;
-        private int _starTotal;
-        private int _eventHours;
+        private int _playerLevel = 200;
+        private int _starTotal = 1000;
+        private int _eventHours = 174;
 
         public EventPointCalculatorViewModel()
         {
