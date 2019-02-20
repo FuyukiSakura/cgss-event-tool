@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CgssEventTool"
@@ -9,176 +10,217 @@
         <viewModels:EventPointCalculatorViewModel />
     </ContentPage.BindingContext>
 
-    <ScrollView>
-        <StackLayout Padding="10,0"
-                     HorizontalOptions="StartAndExpand">
-            <StackLayout.Resources>
-                <ResourceDictionary>
-                    <!-- Align label with Entry -->
-                    <Style TargetType="Label">
-                        <Setter Property="VerticalOptions" Value="Center" />
-                    </Style>
-                </ResourceDictionary>
-            </StackLayout.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-            <Label HorizontalOptions="CenterAndExpand"
-                   Text="{Binding Title}"
-                   FontSize="30" />
-            
-            <!--#region Input -->
+        <BoxView Color="Gray" />
+        <!-- ReSharper disable once Xaml.MissingGridIndex -->
+        <Label HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"
+               Margin="0,10"
+               FontSize="30"
+               TextColor="White"
+               Text="{Binding Title}" />
 
-            <Grid>
-                <!-- Separate label and input evenly -->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <!-- Align label with Entry -->
+                        <Style TargetType="Label">
+                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                            <Setter Property="Margin" Value="10,0" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
 
-                <!-- Number of rows -->
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+                <!--#region Input -->
 
-                <!-- Player Level -->
-                <Label Text="{Binding PlayerLevelLabel}" />
-                <Entry Grid.Row="0"
-                       Grid.Column="1"
-                       Text="{Binding PlayerLevel}"
-                       Keyboard="Numeric" />
+                <Grid>
+                    <!-- Separate label and input evenly -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                <!-- Star number -->
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Text="{Binding StarTotalLabel}" />
-                <Entry Grid.Row="1"
-                       Grid.Column="1"
-                       Text="{Binding StarTotal}"
-                       Keyboard="Numeric" />
+                    <!-- Number of rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-                <!-- Event time -->
-                <Label Grid.Row="2"
-                       Grid.Column="0"
-                       Text="{Binding EventHoursLabel}" />
-                <Entry Grid.Row="2"
-                       Grid.Column="1"
-                       Text="{Binding EventHours}"
-                       Keyboard="Numeric" />
-            </Grid>
+                    <!-- Player Level -->
+                    <Label Text="{Binding PlayerLevelLabel}" />
+                    <Entry Grid.Row="0"
+                           Grid.Column="1"
+                           Text="{Binding PlayerLevel}"
+                           Keyboard="Numeric" />
 
-            <!--#endregion -->
+                    <!-- Star number -->
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Text="{Binding StarTotalLabel}" />
+                    <Entry Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding StarTotal}"
+                           Keyboard="Numeric" />
 
-            <!--#region Result -->
+                    <!-- Event time -->
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           Text="{Binding EventHoursLabel}" />
+                    <Entry Grid.Row="2"
+                           Grid.Column="1"
+                           Text="{Binding EventHours}"
+                           Keyboard="Numeric" />
+                </Grid>
 
-            <Label HorizontalOptions="CenterAndExpand"
-                   FontSize="20"
-                   Text="{Binding ResultSectionHeaderText}" />
+                <!--#endregion -->
 
-            <Grid>
-                <!-- Separate label and input evenly -->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+                <!--#region Result -->
 
-                <!-- Number of rows -->
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+                <Grid>
+                    <BoxView BackgroundColor="LightGray" />
+                    <Label HorizontalOptions="CenterAndExpand"
+                           FontSize="20"
+                           Text="{Binding ResultSectionHeaderText}" />
+                </Grid>
 
-                <!-- Star number -->
-                <Label Text="{Binding NaturalRecoverLabel}" />
-                <Entry Grid.Row="0"
-                       Grid.Column="1"
-                       Text="{Binding NaturalRecover}"
-                       IsEnabled="False" />
+                <Grid>
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <!-- Results label -->
+                            <Style TargetType="Label" 
+                                   x:Key="ResultLabel">
+                                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                                <Setter Property="HorizontalOptions" Value="End" />
+                                <Setter Property="Margin" Value="10,0" />
+                            </Style>
 
-                <!-- 19 Stamina -->
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Text="{Binding MultiplierOneLabel}" />
-                <Entry Grid.Row="1"
-                       Grid.Column="1"
-                       Text="{Binding GamesOfMultiplierOne}"
-                       IsEnabled="False" />
+                            <!-- Alternate row color -->
+                            <Style TargetType="BoxView">
+                                <Setter Property="BackgroundColor" Value="AliceBlue" />
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
 
-                <!-- 38 Stamina -->
-                <Label Grid.Row="2"
-                       Grid.Column="0"
-                       Text="{Binding MultiplierTwoLabel}" />
-                <Entry Grid.Row="2"
-                       Grid.Column="1"
-                       Text="{Binding GamesOfMultiplierTwo}"
-                       IsEnabled="False" />
+                    <!-- Separate label and input evenly -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                <!--#region Collections -->
+                    <!-- Number of rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-                <Label Grid.Row="3"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="2"
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="20"
-                       Text="{Binding CollectedItemHeaderText}" />
+                    <!-- Star number -->
+                    <Label Text="{Binding NaturalRecoverLabel}" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding NaturalRecover}" />
 
-                <!-- No. of collected items -->
-                <Label Grid.Row="4"
-                       Grid.Column="0"
-                       Text="{Binding CollectedItemLabel}" />
-                <Entry Grid.Row="4"
-                       Grid.Column="1"
-                       Text="{Binding CollectedItemNo}"
-                       IsEnabled="False" />
+                    <!-- 19 Stamina -->
+                    <BoxView Grid.Row="1"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Text="{Binding MultiplierOneLabel}" />
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding GamesOfMultiplierOne}" />
 
-                <!-- Points from item -->
-                <Label Grid.Row="5"
-                       Grid.Column="0"
-                       Text="{Binding CollectedPointsFromItemLabel}" />
-                <Entry Grid.Row="5"
-                       Grid.Column="1"
-                       Text="{Binding CollectedPointsFromItem}"
-                       IsEnabled="False" />
+                    <!-- 38 Stamina -->
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           Text="{Binding MultiplierTwoLabel}" />
+                    <Label Grid.Row="2"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding GamesOfMultiplierTwo}" />
 
-                <!-- Points using item -->
-                <Label Grid.Row="6"
-                       Grid.Column="0"
-                       Text="{Binding CollectedPointsUsingItemLabel}" />
-                <Entry Grid.Row="6"
-                       Grid.Column="1"
-                       Text="{Binding CollectedPointsUsingItem}"
-                       IsEnabled="False" />
+                    <!--#region Collections -->
 
-                <!-- Total points -->
-                <Label Grid.Row="7"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="2"
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="20"
-                       Text="{Binding SummeryHeaderText}" />
+                    <Grid Grid.Row="3"
+                          Grid.Column="0"
+                          Grid.ColumnSpan="2">
+                        <BoxView Color="{StaticResource SubHeaderColor}" />
+                        <Label HorizontalOptions="CenterAndExpand"
+                               FontSize="20"
+                               Text="{Binding CollectedItemHeaderText}" />
+                    </Grid>
 
-                <Label Grid.Row="8"
-                       Grid.Column="0"
-                       Text="{Binding TotalPointsLabel}" />
-                <Entry Grid.Row="8"
-                       Grid.Column="1"
-                       Text="{Binding TotalPoints}"
-                       IsEnabled="False" />
+                    <!-- No. of collected items -->
+                    <Label Grid.Row="4"
+                           Grid.Column="0"
+                           Text="{Binding CollectedItemLabel}" />
+                    <Label Grid.Row="4"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding CollectedItemNo}" />
+
+                    <!-- Points from item -->
+                    <BoxView Grid.Row="5"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+                    <Label Grid.Row="5"
+                           Grid.Column="0"
+                           Text="{Binding CollectedPointsFromItemLabel}" />
+                    <Label Grid.Row="5"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding CollectedPointsFromItem}" />
+
+                    <!-- Points using item -->
+                    <Label Grid.Row="6"
+                           Grid.Column="0"
+                           Text="{Binding CollectedPointsUsingItemLabel}" />
+                    <Label Grid.Row="6"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           Text="{Binding CollectedPointsUsingItem}" />
+
+                    <!-- Total points -->
+
+                    <BoxView Grid.Row="7"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             BackgroundColor="Black" />
+                    <Label Grid.Row="7"
+                           Grid.Column="0"
+                           FontSize="20"
+                           TextColor="White"
+                           Text="{Binding TotalPointsLabel}" />
+                    <Label Grid.Row="7"
+                           Grid.Column="1"
+                           Style="{StaticResource ResultLabel}"
+                           FontSize="20"
+                           TextColor="Red"
+                           Text="{Binding TotalPoints}" />
+
+                    <!--#endregion-->
+
+                </Grid>
 
                 <!--#endregion-->
 
-            </Grid>
+            </StackLayout>
+        </ScrollView>
 
-            <!--#endregion-->
-
-        </StackLayout>
-    </ScrollView>
-
+    </Grid>
 </ContentPage>
