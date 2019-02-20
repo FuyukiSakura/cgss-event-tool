@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CgssEventTool.Style.Utilities">
+
+    <!--#region Line separator-->
+
+    <Color x:Key="LineSeparatorColor">LightGray</Color>
+
+    <Style TargetType="BoxView"
+           x:Key="VerticalSeparator">
+        <Setter Property="WidthRequest" Value="1" />
+        <Setter Property="Color" Value="{StaticResource LineSeparatorColor}"></Setter>
+    </Style>
+
+    <Style TargetType="BoxView"
+           x:Key="HorizontalSeparator">
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="Color" Value="{StaticResource LineSeparatorColor}"></Setter>
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>
