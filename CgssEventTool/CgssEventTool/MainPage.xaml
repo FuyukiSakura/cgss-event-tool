@@ -44,6 +44,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <!-- Number of rows -->
@@ -59,6 +60,11 @@
                            Grid.Column="1"
                            Text="{Binding PlayerLevel}"
                            Keyboard="Numeric" />
+                    <Stepper Grid.Row="0"
+                             Grid.Column="2"
+                             Minimum="1"
+                             Maximum="500"
+                             Value="{Binding PlayerLevel}" />
 
                     <!-- Star number -->
                     <Label Grid.Row="1"
@@ -68,6 +74,11 @@
                            Grid.Column="1"
                            Text="{Binding StarTotal}"
                            Keyboard="Numeric" />
+                    <Stepper Grid.Row="1"
+                             Grid.Column="2"
+                             Minimum="3"
+                             Maximum="75000"
+                             Value="{Binding StarTotal}" />
 
                     <!-- Event time -->
                     <Label Grid.Row="2"
@@ -77,6 +88,10 @@
                            Grid.Column="1"
                            Text="{Binding EventHours}"
                            Keyboard="Numeric" />
+                    <Stepper Grid.Row="2"
+                             Grid.Column="2"
+                             Maximum="222"
+                             Value="{Binding EventHours}" />
                 </Grid>
 
                 <!--#endregion -->

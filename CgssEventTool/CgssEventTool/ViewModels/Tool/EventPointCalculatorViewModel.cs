@@ -1,4 +1,5 @@
-﻿using CgssEventTool.BusinessLogicLayer;
+﻿using System;
+using CgssEventTool.BusinessLogicLayer;
 using PageResources = CgssEventTool.Localization.Resources.Layout.EventCalculatorPageResources;
 
 namespace CgssEventTool.ViewModels.Tool
@@ -178,7 +179,7 @@ namespace CgssEventTool.ViewModels.Tool
         /// <summary>
         /// Gets total points collected
         /// </summary>
-        public double TotalPoints => CollectedPointsFromItem + CollectedPointsUsingItem;
+        public double TotalPoints => Math.Floor(CollectedPointsFromItem + CollectedPointsUsingItem);
 
 
         #endregion
