@@ -1,2 +1,3 @@
-# cgss-event-tool
-Cinderella Grils Starlight Stage event supporting tools
+# Cinderella Grils： Starlight Stage Event Tools
+
+Tools that helps player in a Cinderella Grils Starlight Stage event.
