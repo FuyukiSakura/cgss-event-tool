@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="36483UTOSOFT.CinderellaGirlsStarlightStageEventToo" Publisher="CN=2387FEB4-863B-4DA2-B21C-C5E7A83D43F4" Version="1.0.0.0" />
+  <Identity Name="36483UTOSOFT.CinderellaGirlsStarlightStageEventToo" Publisher="CN=2387FEB4-863B-4DA2-B21C-C5E7A83D43F4" Version="0.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="7d5e9e95-36ce-4aca-8a75-e0aa1790c0d6" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Cinderella Girls: Starlight Stage Event Tool</DisplayName>
