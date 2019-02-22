@@ -1,29 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CgssEventTool.BusinessLogicLayer
 {
-    public class CgssCollect
+    /// <summary>
+    /// The CgssCollect API
+    /// Reference: https://github.com/NikuPAN/CGSS_Collect/blob/master/src/cgss_collect/CGSS_Collect.java
+    /// </summary>
+    public static class CgssCollect
     {
-        public static readonly int MaxPlayerLevel = 500;
-        public static readonly int MaxStarCapacity = 75000;
+        private static readonly Dictionary<int, int> LevelStarMap = new Dictionary<int, int>()
+        {
+            { 0, 12 },
+            { 3, 11 },
+            { 11, 10 },
+            { 22, 9 },
+            { 37, 8 },
+            { 58, 7 },
+            { 85, 6 },
+            { 129, 5 },
+            { 197, 4 },
+            { 314, 3 }
+        };
 
+        /// <summary>
+        /// Gets the player's star usage according to the level
+        /// </summary>
+        /// <param name="playerLevel"></param>
+        /// <returns></returns>
         public static int PlayerLevelToStarUsage(int playerLevel)
         {
-            if (playerLevel <= 0) return -1; // 防呆
-
-            if (playerLevel < 4) return 12;
-            if (playerLevel < 12) return 11;
-            if (playerLevel < 23) return 10;
-            if (playerLevel < 38) return 9;
-            if (playerLevel < 59) return 8;
-            if (playerLevel < 86) return 7;
-            if (playerLevel < 130) return 6;
-            if (playerLevel < 198) return 5;
-            if (playerLevel < 315) return 4;
-
-            return 3;
+            return LevelStarMap.LastOrDefault(lv => playerLevel > lv.Key).Value;
         }
 
         /// <summary>
